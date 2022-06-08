@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="regist.css">
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Hospital</h2>
+            <form id="register" method="POST">
+                <label>Types of users</label>
+                <br>
+                <div>
+                    <label for="doctor">Doctor</label>
+                    <input class="pd" type="radio" name="Types of users">&emsp;
+
+                    <label for="patient">Female</label>
+                    <input class="pd" type="radio" name="Types of users">&emsp;
+                </div>
+                <label>First Name</label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="enter your first name" required>
+                <br>
+                <br>
+                <label>Last Name</label>
+                <br>
+                <input type="text" name="lname" id="name" placeholder="enter your last name" required>
+                <br>
+                <br>
+                <label>User Name</label>
+                <br>
+                <input type="text" name="username" id="name" placeholder="enter your username" required>
+                <br>
+                <br>
+                <label>Email </label>
+                <br>
+                <input type="email" name="email" id="name" placeholder="Email" required>
+                <br>
+                <br>
+                <label>Gender</label>
+                <br>
+                <div>
+                    <label for="male">Male</label>
+                    <input class="pd" type="radio" name="GENDER">&emsp;
+
+                    <label for="female">Female</label>
+                    <input class="pd" type="radio" name="GENDER">&emsp;
+
+                    <label for="other">Other</label>
+                    <input class="pd" type="radio" name="GENDER">
+                </div>
+                <br>
+                <label>password :
+                    <input name="password" id="password" type="password" />
+                  </label>
+                <br>
+                <label>confirm password:
+                    <input type="password" name="confirm_password" id="confirm_password" />
+                    <span id='message'></span>
+                  </label>
+                <br>
+                <br>
+                <label for="dreams">Address</label>
+                <br>
+                <input type="text" name="add" id="name" placeholder="Your permanent PerAddress">
+                <br>
+                <br>
+                <button type="menu" class="button" qq>Submit</button>
+                <br>
+                <p>don't have a account </p>
+                <a href="login_page.html">log in</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        $('#password, #confirm_password').on('keyup', function() {
+            if ($('#password').val() == $('#confirm_password').val()) {
+                $('#message').html('Matching').css('color', 'green');
+            } else
+                $('#message').html('Not Matching').css('color', 'red');
+        });
+    </script>
+</body>
+
+
+</html>
